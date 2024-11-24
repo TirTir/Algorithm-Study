@@ -11,8 +11,8 @@ public class Main {
 
 		for(int i = 0; i < len; i++){
 			int num = str.charAt(i) - 'a' + 1;
-			answer += (num * pow) % 1234567891;
-			pow = (pow * r) % 1234567891;
+			answer = (answer + (num * pow) % m) % m;
+			pow = (pow * r) % m;
 		}
 
 		System.out.println(answer);
